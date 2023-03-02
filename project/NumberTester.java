@@ -4,11 +4,21 @@ public class NumberTester {
     public boolean isEven(int number) {
         return number % 2 == 0;
     }
+    public boolean isOdd(int number) {
+        return !(number % 2 == 0);
+    }
+
+    public int getFirstDigit(int number) {
+        String str = String.valueOf(number);
+        return str.charAt(0);
+    }
 
     //Test output
     public static void main(String[] args) {
         NumberTester tester = new NumberTester();
-        System.out.println(tester.isEven(4)); //Should be true
-        System.out.println(tester.isEven(5));
+        System.out.println(tester.isEven(10)); //Should be true
+        System.out.println(tester.isOdd(10)); //Should be false
+
+        System.out.println(tester.getFirstDigit(15));
     }
 }
