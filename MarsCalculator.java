@@ -14,4 +14,12 @@ public class MarsCalculator {
     public float divide(int a, int b, int c) {
         return sum(a, b, c) / 10f;
     }
+
+    public static void main(String[] args) {
+        short shouldBeIncreased = 5;
+        shouldBeIncreased++;
+
+
+        System.out.println(shouldBeIncreased);
+    }
 }
