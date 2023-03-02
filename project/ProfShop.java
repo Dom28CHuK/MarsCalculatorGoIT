@@ -2,15 +2,15 @@ package project;
 
 public class ProfShop {
     public boolean isPriceOk(int price) {
-        return price < 1000;
+        return price > 1000;
     }
 
     public float calculateRegularDiscountPrice(float price) {
-        return price - 10%;
+        return price * 0.9f;
     }
 
     public boolean isDiscount50(int price) {
-        return price > 1000;
+        return true;
     }
 
     public boolean isPriceHappy(int price, int year, int day) {
