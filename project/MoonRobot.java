@@ -9,8 +9,7 @@ public class MoonRobot {
         return hillHeight <= 150 && batteryPercent >= 90;
     }
     public boolean areSensorsOk(boolean isEngineWorking, boolean isRobotStanding) {
-        return (isEngineWorking == true & isRobotStanding == false) ^
-                (isEngineWorking == false & isRobotStanding == true);
+        return isEngineWorking ^ isRobotStanding;
     }
 
     //Test output
