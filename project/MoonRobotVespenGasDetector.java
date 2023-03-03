@@ -2,7 +2,7 @@ package project;
 
 public class MoonRobotVespenGasDetector {
     public boolean isAcidOk(int acidValue, int minAcid, int maxAcid) {
-        return true;
+        return acidValue >= minAcid && acidValue <= maxAcid;
     }
 
     public boolean isDensityOk(int density) {
