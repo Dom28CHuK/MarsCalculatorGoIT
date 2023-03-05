@@ -9,6 +9,16 @@ public class ExonNames {
         return firstName.toLowerCase() + " " + lastName.toUpperCase();
     }
 
+    public boolean isNameLucky(String name) {
+        return (name.contains("A") ^ name.contains("a")) ^
+                (name.contains("O") ^ name.contains("o"));
+    }
+
+    public String getNameCode(String name) {
+        String upperCaseName = name.toUpperCase();
+        return 
+    }
+
     //Test output
     public static void main(String[] args) {
         ExonNames names = new ExonNames();
@@ -20,5 +30,8 @@ public class ExonNames {
         //Should be "exor BIGO"
         String fullName = names.makeFullName("exor", "bigo");
         System.out.println("names.makeFullName(\"exor\", \"bigo\") = " + fullName);
+
+        boolean isNameLucky = names.isNameLucky("Igun");
+        System.out.println("names.isNameLucky(\"Igun\") = " + isNameLucky);
     }
 }
