@@ -16,7 +16,7 @@ public class ExonNames {
 
     public String getNameCode(String name) {
         String upperCaseName = name.toUpperCase();
-        return 
+        return String.valueOf(upperCaseName.charAt(0));
     }
 
     //Test output
@@ -33,5 +33,8 @@ public class ExonNames {
 
         boolean isNameLucky = names.isNameLucky("Igun");
         System.out.println("names.isNameLucky(\"Igun\") = " + isNameLucky);
+
+        String nameCode = names.getNameCode("boRA");
+        System.out.println("names.getNameCode(\"boRA\") = " + nameCode);
     }
 }
