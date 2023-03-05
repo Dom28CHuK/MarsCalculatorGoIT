@@ -15,8 +15,9 @@ public class ExonNames {
     }
 
     public String getNameCode(String name) {
-        String upperCaseName = name.toUpperCase();
-        return String.valueOf(upperCaseName.charAt(0));
+        String firstChar = String.valueOf(name.charAt(0));
+        String lastChar = String.valueOf(name.charAt(name.length() - 1));
+        return firstChar.toUpperCase() + lastChar.toUpperCase();
     }
 
     //Test output
