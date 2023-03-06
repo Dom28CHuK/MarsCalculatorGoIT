@@ -41,6 +41,10 @@ public class ExonNames {
 //        boolean isDigit = symbol >= '0' && symbol <= '9';
     }
 
+    public boolean isInvisibleName(String name) {
+        return name.isBlank();
+    }
+
     //Test output
     public static void main(String[] args) {
         ExonNames names = new ExonNames();
@@ -64,5 +68,8 @@ public class ExonNames {
 
         boolean isMoneyName = names.isMoneyName("31Boss31");
         System.out.println("names.isMoneyName(\"31Boss31\") = " + isMoneyName);
+
+        boolean isInvisible = names.isInvisibleName(" ");
+        System.out.println("names.isInvisibleName(\" \") = " + isInvisible);
     }
 }
