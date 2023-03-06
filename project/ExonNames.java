@@ -15,9 +15,14 @@ public class ExonNames {
     }
 
     public String getNameCode(String name) {
-        String firstChar = String.valueOf(name.charAt(0));
-        String lastChar = String.valueOf(name.charAt(name.length() - 1));
-        return firstChar.toUpperCase() + lastChar.toUpperCase();
+        if (name.length() == 1) {
+            String firstChar = String.valueOf(name.charAt(0));
+            return firstChar.toUpperCase();
+        } else {
+            String firstChar = String.valueOf(name.charAt(0));
+            String lastChar = String.valueOf(name.charAt(name.length() - 1));
+            return firstChar.toUpperCase() + lastChar.toUpperCase();
+        }
     }
 
     //Test output
@@ -37,5 +42,8 @@ public class ExonNames {
 
         String nameCode = names.getNameCode("boRA");
         System.out.println("names.getNameCode(\"boRA\") = " + nameCode);
+
+        String nameCode2 = names.getNameCode("x");
+        System.out.println("names.getNameCode(\"x\") = " + nameCode2);
     }
 }
