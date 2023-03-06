@@ -54,7 +54,9 @@ public class ExonNames {
 //                .replace("nO", "yes")
 //                .replace("NO", "yes");
 
-    //Test output
+    public String makeNameClean(String name) {
+        return "CLEAN" + name.strip() + "CLEAN";
+    }
     public static void main(String[] args) {
         ExonNames names = new ExonNames();
 
@@ -83,5 +85,8 @@ public class ExonNames {
 
         String positive = names.makeNamePositive("NoMont");
         System.out.println("names.makeNamePositive(\"NoMont\") = " + positive);
+
+        String cleanName = names.makeNameClean(" dirty ");
+        System.out.println("names.makeNameClean(\" dirty \") = " + cleanName);
     }
 }
