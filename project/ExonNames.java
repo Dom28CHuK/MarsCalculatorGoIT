@@ -25,6 +25,23 @@ public class ExonNames {
         }
     }
 
+    public boolean isMoneyName(String name) {
+        char firstChar = name.charAt(0);
+        char lastChar = name.charAt(name.length() - 1);
+
+        boolean isFirstCharDigit = Character.isDigit(firstChar);
+        boolean isLastCharDigit = Character.isDigit(lastChar);
+
+//        boolean firstLetterOk = firstLetter >= '0' && firstLetter <= '9';
+//        boolean lastLetterOk = lastLetter >= '0' && lastLetter <= '9';
+
+
+
+        return isFirstCharDigit == isLastCharDigit;
+//        char = '5';
+//        boolean isDigit = symbol >= '0' && symbol <= '9';
+    }
+
     //Test output
     public static void main(String[] args) {
         ExonNames names = new ExonNames();
@@ -45,5 +62,8 @@ public class ExonNames {
 
         String nameCode2 = names.getNameCode("x");
         System.out.println("names.getNameCode(\"x\") = " + nameCode2);
+
+        boolean isMoneyName = names.isMoneyName("31Boss31");
+        System.out.println("names.isMoneyName(\"31Boss31\") = " + isMoneyName);
     }
 }
