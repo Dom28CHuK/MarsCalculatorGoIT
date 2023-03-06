@@ -45,6 +45,15 @@ public class ExonNames {
         return name.isBlank();
     }
 
+    public String makeNamePositive(String name) {
+        return name.replaceAll("(?i)No", "yes");
+    }
+//    return name
+//            .replace("no", "yes")
+//            .replace("No", "yes")
+//                .replace("nO", "yes")
+//                .replace("NO", "yes");
+
     //Test output
     public static void main(String[] args) {
         ExonNames names = new ExonNames();
@@ -71,5 +80,8 @@ public class ExonNames {
 
         boolean isInvisible = names.isInvisibleName(" ");
         System.out.println("names.isInvisibleName(\" \") = " + isInvisible);
+
+        String positive = names.makeNamePositive("NoMont");
+        System.out.println("names.makeNamePositive(\"NoMont\") = " + positive);
     }
 }
