@@ -34,8 +34,7 @@ public class ExonNames {
 
 //        boolean firstLetterOk = firstLetter >= '0' && firstLetter <= '9';
 //        boolean lastLetterOk = lastLetter >= '0' && lastLetter <= '9';
-
-
+//        return firstLetterOk && lastLetterOk;
 
         return isFirstCharDigit == isLastCharDigit;
 //        char = '5';
