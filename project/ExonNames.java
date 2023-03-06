@@ -54,7 +54,13 @@ public class ExonNames {
 //                .replace("nO", "yes")
 //                .replace("NO", "yes");
 
-    //Test output
+    public String makeNameClean(String name) {
+        return "CLEAN" + name.strip() + "CLEAN";
+    }
+
+    public String makeHalfOfName(String name) {
+        return name.substring(0, name.length() / 2);
+    }
     public static void main(String[] args) {
         ExonNames names = new ExonNames();
 
@@ -83,5 +89,11 @@ public class ExonNames {
 
         String positive = names.makeNamePositive("NoMont");
         System.out.println("names.makeNamePositive(\"NoMont\") = " + positive);
+
+        String cleanName = names.makeNameClean(" dirty ");
+        System.out.println("names.makeNameClean(\" dirty \") = " + cleanName);
+
+        String halfOfName = names.makeHalfOfName("Gurk");
+        System.out.println("names.makeHalfOfName(\"Gurk\") = " + names.makeHalfOfName("Gurk"));
     }
 }
